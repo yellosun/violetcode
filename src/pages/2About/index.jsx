@@ -27,15 +27,15 @@ export default function About() {
       id={routesFlat.about}
     >
       <Tabs onTextBodyChange={onTextBodyChange} textDisplay={textDisplay} />
-      <div className="w-full h-[500px] flex justify-center">
+      <div className="w-full h-[600px] flex justify-center">
         {textDisplay === "DOM" && (
-          <div
-            className="h-full text-lg max-h-[460px] overflow-scroll pr-4"
+          <code
+            className="border-l-2 border-orange pl-10 max-h-[600px] overflow-scroll h-[fit-content] text-sm"
             dangerouslySetInnerHTML={{ __html: safeHtml }}
           />
         )}
         {textDisplay === "<HTML />" && (
-          <div className="shadow-md bg-text/10 p-10 rounded-md max-h-[500px] overflow-scroll">
+          <div className="shadow-md bg-text/10 p-10 rounded-md max-h-[600px] overflow-scroll">
             {htmlText.map((div) => {
               return (
                 div.length > 1 && (

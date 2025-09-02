@@ -16,7 +16,7 @@ export default function Header() {
             className={iconStyle}
             href="https://www.linkedin.com/in/violetmoon/"
           >
-            <PersonIcon className="mr-2" /> LinkedIn
+            <PersonIcon className="mr-2 h-4 w-4" /> LinkedIn
           </a>
           <span className="px-4">{"/"}</span>
           <a
@@ -24,7 +24,7 @@ export default function Header() {
             className={iconStyle}
             href="mailto:violetwmoon@gmail.com"
           >
-            <MailIcon className="mr-2" />
+            <MailIcon className="mr-2 h-4 w-4" />
             Email
           </a>
         </div>

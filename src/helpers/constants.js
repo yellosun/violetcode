@@ -12,14 +12,20 @@ export const profileImg =
 export const bio = `<div class="mb-4">
   As a Lead Frontend Developer and advocate for thoughtful,
   human-centered technology, I specialize in building React-based
-  codebases from the ground up. Whether optimizing existing codebases, 
-  interweaving cross team components, or starting from scratch, I focus on integrating: <b>1) scalable, 2) legible,
-  </b> and <b>3) efficiently, maintainabile architecture</b>.
-</div>
+  codebases from the ground up. Whether turning ideas into interactive actualities, getting existing codebases to run effortlessly, 
+  resolving cross-team disputes, or building a frontend team form scratch, I have a few core tenents.
+  </div>
+  <div class="mb-4 ml-10 max-w-[600px]">
+  <div class="font-bold mb-2">1) What are the pain points? Does this block us or bug us? </div>
+  <div class="font-bold mb-2">2) Is there and what is the root?</div>
+  <div class="font-bold mb-2">3) Is it more more client-conscious to address it or pivot? Is it more more developer-compassionate to address it or pivot?</div>
+  <div class="font-bold mb-2">4) What is the path to fastest development while maintaining expectional product standards and developer quality of life?</div>
+  <div class="font-bold mb-2">5) How can we ensure code is scalable and efficient while retaining legible and enjoyable architecture?</div>
+  </div>
 <div class="mb-4">
   Over the last decade, I’ve led frontend teams, mentored junior
   developers, and established robust style guides and coding standards
-  to ensure consistency and collaboration across frontend projects and
+  to unify consistency and empower collaboration across frontend projects and
   development teams.
 </div>
 <div class="mb-4">
@@ -30,7 +36,7 @@ export const bio = `<div class="mb-4">
   collaboration come together to create meaningful, user-focused
   applications.
 </div>
-<div class="mb-4">
+<div class="">
   In parallel, I bring a unique background in digital marketing,
   artistic development, and healing arts therapy. All experiences that
   deepen my empathy, creativity, and communication in cross-team

@@ -10,7 +10,7 @@ export default function Footer() {
         <a
           target="_blank"
           className={linkStyle}
-          href="mailto:violetwmoon@gmail.com"
+          href="https://github.com/yellosun/violetcode"
         >
           Site Source Code
         </a>

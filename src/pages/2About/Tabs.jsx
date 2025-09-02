@@ -19,18 +19,16 @@ export default function Tabs({ onTextBodyChange, textDisplay }) {
               onClick={() => onTextBodyChange(option)}
               className={clsx(
                 tabStyle,
-                isActive ? "text-bg" : " border border-b-[0] border-t-text border-x-text"
+                isActive ? "bg-bg z-10 border border-b-[0] border-t-text border-x-text -mb-[1px]" : " bg-text/10 "
               )}
             >
-              {/* Background highlight sits at lowest layer */}
               {isActive && (
                 <motion.div
-                  className="absolute inset-0 rounded-t-md bg-text z-0"
+                  className="absolute inset-0 rounded-t-md z-0"
                   transition={{ type: "spring", stiffness: 200, damping: 100 }}
                 />
               )}
 
-              {/* Circle hops ON TOP of background */}
               <AnimatePresence mode="wait">
                 {isActive && (
                   <motion.div
@@ -44,13 +42,12 @@ export default function Tabs({ onTextBodyChange, textDisplay }) {
                 )}
               </AnimatePresence>
 
-              {/* Text stays above background but below circle */}
               <span className="relative z-10">{option}</span>
             </code>
           );
         })}
       </div>
-      <div className="mb-10 w-[800px] border-text border-[.1px]" />
+      <div className="z-0 mb-10 w-[800px] border-text border-[.1px]" />
     </>
   );
 }
