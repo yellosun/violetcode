@@ -47,7 +47,7 @@ export default function Contact() {
           >
             {icon}
 
-            <code className="text-xl my-1 uppercase tracking-widest">
+            <code className="text-xl mb-1 mt-4 uppercase tracking-widest">
               {display}
             </code>
             <div className="italic text-xs w-20 text-orange">{subText}</div>
@@ -59,7 +59,7 @@ export default function Contact() {
 }
 
 const iconStyle = clsx(
-  "hover:scale-[0.98] px-20 flex text-center h-40 w-40 mr-10 hover:bg-text/5 items-center flex-col justify-center border"
+  "hover:scale-[0.98] px-20 flex text-center h-40 w-40 mr-10 hover:bg-text/5 items-center flex-col justify-center border border-dashed rounded-sm border-text"
 );
 const resumeStyle = clsx(
   iconStyle + " bg-gradient-to-r from-red to-orange px-0 border-none"

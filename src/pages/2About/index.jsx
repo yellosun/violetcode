@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useState, useEffect, useMemo } from "react";
 import Editor from "react-simple-wysiwyg";
 import DOMPurify from "dompurify";
@@ -9,6 +10,7 @@ export default function About() {
   const [richText, setRichText] = useState(bio);
   const [htmlText, setHTMLText] = useState("");
   const [textDisplay, onTextBodyChange] = useState("DOM");
+  const [codeCopied, setCodeCopied] = useState(false);
 
   const onRichTextChange = (e) => setRichText(e.target.value);
 
@@ -21,21 +23,44 @@ export default function About() {
     setHTMLText(nestedSplit);
   }, [richText]);
 
+  const copyCode = () => {
+    if (!codeCopied) {
+      setCodeCopied(true);
+
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(safeHtml);
+
+    }
+  };
+
+  useEffect(() => {
+    if (codeCopied) {
+      setTimeout(() => {
+        setCodeCopied(false);
+      }, 3000);
+    }
+  }, [codeCopied]);
+
   return (
-    <div
-      className="h-screen flex flex-col items-center justify-center max-w-[800px]"
-      id={routesFlat.about}
-    >
+    <div className={parentCont} id={routesFlat.about}>
       <Tabs onTextBodyChange={onTextBodyChange} textDisplay={textDisplay} />
       <div className="w-full h-[600px] flex justify-center">
         {textDisplay === "DOM" && (
           <code
-            className="border-l-2 border-orange pl-10 max-h-[600px] overflow-scroll h-[fit-content] text-sm"
+            className={plainTextCont}
             dangerouslySetInnerHTML={{ __html: safeHtml }}
           />
         )}
         {textDisplay === "<HTML />" && (
-          <div className="shadow-md bg-text/10 p-10 rounded-md max-h-[600px] overflow-scroll">
+          <div className={htmlContainer}>
+            <div
+              onClick={copyCode}
+              className={clsx(
+                (codeCopied ? "text-green border-green " : "") + copyText
+              )}
+            >
+              {codeCopied ? <span>Copied!</span> : <span>Copy</span>}
+            </div>
             {htmlText.map((div) => {
               return (
                 div.length > 1 && (
@@ -63,3 +88,16 @@ export default function About() {
     </div>
   );
 }
+
+const parentCont = clsx(
+  "h-screen flex flex-col items-center justify-center max-w-[800px]"
+);
+const plainTextCont = clsx(
+  "border-l-2 border-orange pl-10 max-h-[600px] overflow-scroll h-[fit-content] text-sm"
+);
+const htmlContainer = clsx(
+  "shadow-md bg-text/10 p-10 rounded-md max-h-[600px] overflow-scroll relative"
+);
+const copyText = clsx(
+  "absolute top-0 right-0 text-[10px] mr-2 mt-2 hover:bg-text/10 hover:cursor-pointer border p-2 rounded-md w-[60px] text-center"
+);
