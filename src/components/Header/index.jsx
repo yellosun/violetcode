@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { HashLink } from "react-router-hash-link";
 import { routesFlat } from "../../routes";
-import { MailIcon, PersonIcon } from "../../assets/icons";
+import { MailIcon, CopyIcon, PersonIcon } from "../../assets/icons";
 
 export default function Header() {
   return (
@@ -14,18 +14,27 @@ export default function Header() {
           <a
             target="_blank"
             className={iconStyle}
-            href="https://www.linkedin.com/in/violetmoon/"
+            href="mailto:violetwmoon@gmail.com"
           >
-            <PersonIcon className="mr-2 h-4 w-4" /> LinkedIn
+            <MailIcon className="mr-2 h-4 w-4" />
+            Email
           </a>
           <span className="px-4">{"/"}</span>
           <a
             target="_blank"
             className={iconStyle}
-            href="mailto:violetwmoon@gmail.com"
+            href="https://www.linkedin.com/in/violetmoon/"
           >
-            <MailIcon className="mr-2 h-4 w-4" />
-            Email
+            <PersonIcon className="mr-2 h-4 w-4" />
+            LinkedIn
+          </a>
+          <span className="px-4">{"/"}</span>
+          <a
+            target="_blank"
+            className={iconStyle}
+            href="https://www.github.com/yellosun"
+          >
+            <CopyIcon className="mr-2 h-4 w-4" /> GitHub
           </a>
         </div>
       </div>
