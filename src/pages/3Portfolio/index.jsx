@@ -28,8 +28,6 @@ export default function Portfolio() {
               alt={project.caption}
               className={imgStyle}
             />
-            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-            <p className="text-gray-700 mb-4">{project.description}</p>
           </div>
         ))}
       </div>
@@ -44,19 +42,19 @@ export default function Portfolio() {
 }
 
 const parentContainer = clsx(
-  "h-screen flex flex-col justify-center items-center overflow-hidden"
+  "md:h-screen flex flex-col justify-center items-center overflow-hidden"
 );
 const projectsContainer = clsx(
-  "flex flex-wrap justify-center items-center max-w-[1100px]"
+  "flex flex-wrap justify-center items-center md:-ml-6 -ml-2 grid md:grid-cols-3 grid-cols-2"
 );
 const projectContainer = clsx(
-  "shadow-lg w-[20rem] hover:md:h-[11rem] hover:md:-mt-12 md:h-[8rem] h-[3rem] cursor-pointer relative overflow-hidden"
+  "shadow-lg md:w-[20rem] hover:md:h-[11rem] hover:md:-mt-12 md:h-[8rem] h-[6rem] w-[8rem] pl-4 cursor-pointer relative overflow-hidden"
 );
 const imgStyle = clsx("h-auto w-full top-0 absolute object-fit");
 
 const projects = [
   {
-    title: "Non-Profit Website",
+    title: "Site Redesign & Rebuild - Version 2.0",
     company: "CTrees.org",
     desc: "As the first frontend developer and team lead at CTrees, I built the organization’s entire frontend foundation from the ground up. I established development systems, tooling, and workflows — including CI/CD pipelines, testing frameworks, and coding standards — to support long-term scalability. I led and mentored the frontend team while architecting and implementing the web platform that delivers dashboards, visualizations, and secure user flows for accessing global forest carbon data. Collaborating closely with scientists and backend engineers, I ensured the platform was performant, reliable, and usable by governments, NGOs, and private organizations worldwide.",
     interface: ["Desktop", "Tablet", "Mobile"],
@@ -66,7 +64,7 @@ const projects = [
       "Using satellite data, AI, and field inventories, this product delivers accurate, transparent forest carbon measurements to governments, NGOs, and private organizations to support climate action and reporting.",
   },
   {
-    title: "Non-Profit Website",
+    title: "Full-Scale Production - Version 1.0",
     company: "CTrees.org",
     desc: "The initial iteration of CTrees’ web platform served as a second-round minimum viable product (MVP) to make early forest carbon data accessible to stakeholders. It provided foundational dashboards, data visualizations, and basic reporting tools for governments, NGOs, and private organizations, allowing users to explore forest carbon measurements and track land-use impacts. While simpler than the final rebranded version, this MVP laid the groundwork for secure, scalable access to high-quality environmental data.",
     interface: ["Desktop", "Tablet", "Mobile"],
@@ -78,7 +76,7 @@ const projects = [
   {
     title: "Geospatial Data Visualization",
     company: "CTrees.org",
-    desc: "I helped co-develop a dashboard and interactive mapping tool using Mapbox to visualize geospatial carbon data. Collaborating closely with scientists, engineers, and product leads, I translated complex datasets into intuitive, interactive visualizations that allowed stakeholders to explore forest coverage, carbon stocks, and land-use changes. This early version provided functional, accessible insights and laid the groundwork for future enhancements and the platform’s later pivot.",
+    desc: "Co-developed an interactive dashboard and mapping tool using Mapbox to visualize geospatial carbon data. Collaborated with scientists, engineers, and product leads to translate complex datasets into intuitive visualizations, enabling stakeholders to explore forest coverage, carbon stocks, and land-use changes. This MVP provided accessible, functional insights and laid the foundation for future platform enhancements.",
     interface: ["Desktop", "Tablet", "Mobile"],
     link: "https://ctrees.org/reddai",
     image: projectImgs.map,
@@ -88,32 +86,32 @@ const projects = [
   {
     title: "Google Earth Engine Geospatial Analysis",
     company: "CTrees.org",
-    desc: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Its purpose is to permit a page layout to be designed, independently of the copy that will subsequently populate it, or to demonstrate various fonts of a typeface without meaningful text that could be distracting. ",
+    desc: "Developed a geospatial analysis platform leveraging Google Earth Engine, enabling advanced visualization and interpretation of global forest and carbon data. Built a custom desktop interface to handle complex geospatial datasets, delivering interactive maps, analytics, and data exploration tools. This project provided researchers and stakeholders with critical insights into climate impact, advancing CTrees’ mission of environmental monitoring and sustainability.",
     interface: ["Desktop"],
     link: "https://ctrees.org/luca",
     image: projectImgs.luca,
     caption:
-      "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
+      "A quick view at CTrees' LUCA Platform offering bi-weekly carbon impact updates using geospatial analysis.",
   },
   {
-    title: "Content Management System",
+    title: "Enterprise-Grade CMS (Content Management System)",
     company: "CTrees.org",
-    desc: "",
+    desc: "Designed and built a custom content management system from the ground up, creating a scalable and secure backend with a responsive desktop interface. This complex system empowered the organization to manage global environmental data, streamline publishing workflows, and maintain high data integrity. By delivering a fully bespoke CMS, I provided a critical tool that became central to the company's core operations and long-term platform growth.",
     interface: ["Desktop"],
     link: "https://ctrees.org/admin",
     image: projectImgs.cms,
     caption:
-      "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
+      "Custom CMS interface enabling content creators to manage and publish news articles efficiently, with a clear, responsive dashboard for streamlined workflow and editorial control.",
   },
   {
-    title: "Artist Portfolio",
+    title: "Customized Professional Artist Portfolio",
     company: "Violetdanse.com",
-    desc: "",
+    desc: "Designed and developed a fully responsive artist portfolio website, Violetdanse.com, showcasing dance works, multimedia projects, and professional achievements. Built from scratch with a focus on performance, accessibility, and elegant design across desktop, tablet, and mobile. The platform serves as both a creative showcase and a professional hub, highlighting artistic identity while delivering a seamless user experience.",
     interface: ["Desktop", "Tablet", "Mobile"],
     link: "https://violetdanse.com",
     image: projectImgs.violetdanse,
     caption:
-      "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
+      "Custom portfolio interface showcasing complex events and projects layout, allowing seamless browsing and intuitive previews of multimedia content and professional achievements.",
   },
   {
     title: "Data Visualization Platform",
@@ -124,18 +122,18 @@ const projects = [
     image: projectImgs.crunch,
     video: "https://crunch.io/img/visualization_and_delivery.gif",
     caption:
-      "Visualization & Delivery tool transforms survey data into interactive dashboards, charts, and tables.",
+      "Visualization & Delivery tool turning survey data into interactive dashboards, charts, and tables for intuitive exploration and actionable insights.",
   },
   {
-    title: "Crypto Sentiment Analysis",
+    title: "MVP Crypto Sentiment Analysis Platform",
     company: "CryptoEQ.io",
-    desc: "",
+    desc: "Built the complete sentiment analysis dashboard and crypto comparison platform MVP for CryptoEQ.io, delivering a responsive interface across desktop, tablet, and mobile. Designed and developed the front end from the ground up, integrating real-time data visualization, sentiment scoring, and comparison tools to give users actionable market insights. This end-to-end build laid the foundation for CryptoEQ’s core product experience.",
     interface: ["Desktop", "Tablet", "Mobile"],
     link: "https://cryptoeq.io/dashboard",
     // https://web.archive.org/web/20200411095039/https://cryptoeq.io/
     image: projectImgs.eq,
     caption:
-      "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
+      "End-to-end MVP dashboard using interactive charting and graphing tools to transform crypto market sentiment data into real-time visualizations and comparison features across desktop, tablet, and mobile.",
   },
   {
     title: "MVP Product Launch",
@@ -148,19 +146,19 @@ const projects = [
       "The toothbrush product website designed to support children with sensory sensitivities or motor challenges. Integrates with a companion app so parents can track brushing habits.",
   },
   {
-    title: "App MVP Mockup",
+    title: "UX Design & Mobile App Prototyping",
     company: "Boba.me",
-    desc: "",
+    desc: "Designed a mobile app MVP for Boba.me in Figma, creating an intuitive user experience for browsing, ordering, and customizing boba drinks. Developed interactive prototypes that demonstrate seamless navigation, clear visual hierarchy, and engaging UI elements, ready for testing and iteration.",
     interface: ["Mobile"],
     link: "https://www.figma.com/proto/AMOnS6XG44jBzlYOnIlU6j/BobaMe?node-id=1-3",
     image: projectImgs.boba,
     caption:
-      "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
+      "Interactive Figma prototype for a mobile boba app, demonstrating streamlined ordering, customization flows, and a playful, user-friendly interface.",
   },
   {
-    title: "Therapy Practice",
+    title: "Custom Website for Therapy Practice",
     company: "Moonflamelove.com",
-    desc: "",
+    desc: "Built and launched a responsive website for Moonflamelove.com, a private therapy practice. Developed the platform from scratch to reflect the practice’s values of accessibility, care, and trust, with an elegant design optimized for desktop, tablet, and mobile. The site integrates clear navigation, informative content, and a welcoming aesthetic, serving as both a professional presence and a resource hub for clients seeking mental health support.",
     interface: ["Desktop", "Tablet", "Mobile"],
     link: "https://moonflamelove.com/about",
     image: projectImgs.moonflame,
@@ -170,39 +168,39 @@ const projects = [
   {
     title: "IBM Templating Software",
     company: "GreenMountainEnergy.com",
-    desc: "",
+    desc: "Co-developed IBM templating software for GreenMountainEnergy.com, creating responsive desktop and mobile interfaces. Midway through the project, I took over the work of a previous co-developer and completed the remaining development in record time. Designed templates that streamlined content management, ensured brand consistency, and improved workflow efficiency, delivering a scalable, high-performance solution ahead of schedule.",
     interface: ["Desktop", "Mobile"],
     link: "https://www.greenmountainenergy.com/",
     image: projectImgs.energy,
     caption:
-      "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
+      "Led and completed IBM templating software implementation, taking over mid-project to deliver responsive desktop and mobile templates that enhanced content management, brand consistency, and workflow efficiency.",
   },
   {
-    title: "Internal Systems",
+    title: "Enterprise Internal Systems Platform",
     company: "Coca-ColaCompany.com",
-    desc: "",
+    desc: "Developed and optimized operations systems for Coca-ColaCompany.com, creating tools to streamline workflows, improve data management, and enhance operational efficiency. Built responsive, user-focused interfaces that supported cross-team collaboration and integrated complex business logic, delivering a reliable and scalable solution for internal stakeholders.",
     interface: ["Desktop"],
     image: projectImgs.cocacola,
     caption:
-      "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
+      "Custom internal desktop portal for Coca-Cola, designed to streamline workflows, improve data management, and enhance operational efficiency for cross-team collaboration.",
   },
   {
     title: "Marketing Site Redesign",
     company: "Tigerspace.digital",
-    desc: "",
+    desc: "Led the full redesign of Tigerspace.digital’s marketing website across desktop, tablet, and mobile. Delivered a modern, responsive interface with improved user experience, accessibility, and visual consistency. Streamlined content presentation and interactive elements to better engage visitors, strengthen brand identity, and support conversion goals.",
     interface: ["Desktop", "Tablet", "Mobile"],
     image: projectImgs.tigerspace,
     caption:
-      "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
+      "Full-scale marketing website redesign with responsive design, improved UX, and interactive elements to enhance engagement and brand presentation across devices.",
   },
   {
-    title: "Yoga Studio SEO",
+    title: "Analytics Tracking, SEO, & Website Optimization",
     company: "Urbanfityoga.com",
-    desc: "",
+    desc: "Implemented SEO improvements and optimized the Urbanfityoga.com website for desktop and mobile, enhancing search visibility, page performance, and user engagement. Conducted technical audits, refined content structure, and ensured responsive design to support both client acquisition and retention for the studio.",
     interface: ["Desktop", "Mobile"],
-    link: "https://www.urbanfityoga.com/classes-and-pricing.html",
+    // link: "https://www.urbanfityoga.com/classes-and-pricing.html",
     image: projectImgs.urbanfit,
     caption:
-      "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
+      "SEO and website optimization for Urbanfityoga.com, improving search visibility, site performance, and user experience across desktop and mobile.",
   },
 ];

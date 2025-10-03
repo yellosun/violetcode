@@ -19,7 +19,8 @@ export default function Tabs({ onTextBodyChange, textDisplay }) {
               onClick={() => onTextBodyChange(option)}
               className={clsx(
                 tabStyle,
-                isActive ? activeTabStyle : " bg-text/10 "
+                isActive ? activeTabStyle : " bg-text/10 ",
+                (option === richTextLabel && " hidden md:flex")
               )}
             >
               {isActive && (
@@ -56,7 +57,7 @@ const activeTabStyle = clsx(
   "bg-bg z-10 border border-b-[0] border-t-text border-x-text -mb-[1px]"
 );
 const tabStyle = clsx(
-  "rounded-t-md px-2 md:px-6 relative py-2 font-bold tracking-widest mr-2 cursor-pointer text-xxs md:text-sm"
+  "rounded-t-md  md:px-6 relative py-2 font-bold tracking-widest mr-2 cursor-pointer text-xxs md:text-sm"
 );
 const bottomLine = clsx(
   "z-0 mb-10 w-full md:max-w-[800px] border-text border-[.1px]"

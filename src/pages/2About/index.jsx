@@ -95,7 +95,7 @@ const parentCont = clsx(
 );
 const plainTextCont = clsx(" overflow-scroll h-[fit-content] text-xs pr-2");
 const htmlContainer = clsx(
-  "shadow-md bg-text/10 md:p-10 px-4 pb-4 pt-10 rounded-md overflow-scroll relative"
+  "shadow-md bg-text/10 md:p-10 px-4 pb-4 pt-10 rounded-md overflow-scroll relative z-20"
 );
 const copyText = clsx(
   "absolute top-0 right-0 text-[10px] mr-2 mt-2 hover:bg-text/10 hover:cursor-pointer border p-2 rounded-md w-[60px] text-center"

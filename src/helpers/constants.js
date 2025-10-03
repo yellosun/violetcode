@@ -3,7 +3,6 @@ export const typewriterWords = [
   "React expert",
   "lead architect",
   "team mentor",
-  "AI ethics advocate"
 ];
 
 export const profileImg =
@@ -63,7 +62,7 @@ export const work = [
     location: "Pasadena, California",
     type: "Remote",
     date: "Jun '23 - Aug '25",
-    duration: "2 years 2 months",
+    duration: "2 years 3 months",
     link: "",
     img: "",
     imgAlt: "",

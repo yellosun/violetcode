@@ -50,15 +50,14 @@ export default function Experience() {
       <div className={styles.innerParent}>
         {work.map((job, idx) => {
           const months = parseDuration(job.duration);
-          const spacing = months * 8; // px per month
+          const spacing = months * 10; // px per month
 
           return (
             <motion.div
               key={idx}
               className={styles.jobAndTimeContainer}
-              style={{ minHeight: "100vh", height: spacing }} // full viewport + scaled
+              style={{ height: spacing }} // full viewport + scaled
               variants={itemVariants}
-              whileHover={{ scale: 1.05, y: -5 }}
             >
               <div className={styles.innerJobAndTime}>
                 {/* Time Info */}
