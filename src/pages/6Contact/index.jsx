@@ -6,6 +6,7 @@ import {
   MailIcon,
   PersonIcon,
 } from "../../assets/icons";
+import pdf from "../../assets/VioletMoon_CV.pdf";
 
 const linksAndIcons = [
   {
@@ -27,7 +28,7 @@ const linksAndIcons = [
     subText: "Github",
   },
   {
-    link: "https://www.github.com/yellosun",
+    link: pdf,
     icon: <DownloadIcon className="h-10 w-10 fill-bg" />,
     display: "Download",
     subText: "Resume",
@@ -45,6 +46,7 @@ const bgColor = (index) => {
     return " bg-text/10 bg-gradient-to-r from-red to-orange rotate-[5deg]";
   }
 };
+
 export default function Contact() {
   return (
     <div className={parentContainer} id={routesFlat.contact}>

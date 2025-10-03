@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { HashLink } from "react-router-hash-link";
 import { routesFlat } from "../../routes";
-import { MailIcon, CopyIcon, PersonIcon } from "../../assets/icons";
+import { CopyIcon, PersonIcon } from "../../assets/icons";
 
 export default function Header() {
   const Seperator = () => <span className="px-4 hidden md:flex">{"/"}</span>;
@@ -15,7 +15,7 @@ export default function Header() {
           <a
             target="_blank"
             className={iconStyle}
-            href="mailto:violetwmoon@gmail.com"
+            href="https://www.linkedin.com/in/violetmoon/"
           >
             <PersonIcon className="mr-2 h-4 w-4" />
             LinkedIn
@@ -34,7 +34,9 @@ export default function Header() {
   );
 }
 
-const container = clsx("flex justify-between items-center w-full text-sm mt-4 z-50");
+const container = clsx(
+  "flex justify-between items-center w-full text-sm mt-4 z-50"
+);
 const baseLinkStyle = clsx(
   "flex w-[200px] bg-gradient-to-r from-red to-orange justify-center items-center"
 );
