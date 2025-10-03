@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 const defaultStyles = " fill-text  ";
 
-export function MailIcon({ className = " h-4 w-4"}) {
+export function MailIcon({ className = " h-4 w-4" }) {
   return (
     <div className={clsx(defaultStyles + className)}>
       <svg
@@ -19,7 +19,7 @@ export function MailIcon({ className = " h-4 w-4"}) {
   );
 }
 
-export function PersonIcon({ className = " h-4 w-4"}) {
+export function PersonIcon({ className = " h-4 w-4" }) {
   return (
     <div className={clsx(defaultStyles + className)}>
       <svg
@@ -36,7 +36,7 @@ export function PersonIcon({ className = " h-4 w-4"}) {
   );
 }
 
-export function CopyIcon({ className = " h-4 w-4"}) {
+export function CopyIcon({ className = " h-4 w-4" }) {
   return (
     <div className={clsx(defaultStyles + className)}>
       <svg
@@ -53,7 +53,7 @@ export function CopyIcon({ className = " h-4 w-4"}) {
   );
 }
 
-export function DownloadIcon({ className = " h-4 w-4"}) {
+export function DownloadIcon({ className = " h-4 w-4" }) {
   return (
     <div className={clsx(defaultStyles + className)}>
       <svg
@@ -68,6 +68,27 @@ export function DownloadIcon({ className = " h-4 w-4"}) {
         </g>
         <g>
           <path d="M5,20h14v-2H5V20z M19,9h-4V3H9v6H5l7,7L19,9z" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+export function OpenIcon({ className = " h-4 w-4" }) {
+  return (
+    <div className={clsx(defaultStyles + className)}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="100%"
+        width="100%"
+        viewBox="0 0 24 24"
+        fill="inherit"
+      >
+        <g>
+          <rect fill="none" height="24" width="24" />
+        </g>
+        <g>
+          <polygon points="6,6 6,8 14.59,8 5,17.59 6.41,19 16,9.41 16,18 18,18 18,6" />
         </g>
       </svg>
     </div>

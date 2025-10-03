@@ -76,5 +76,5 @@ export default function Typewriter({
 }
 
 const container = clsx(
-  "inline-flex overflow-hidden text-6xl font-bold"
+  "inline-flex overflow-hidden text-3xl md:text-4xl lg:text-6xl font-bold"
 );

@@ -19,7 +19,7 @@ export default function Tabs({ onTextBodyChange, textDisplay }) {
               onClick={() => onTextBodyChange(option)}
               className={clsx(
                 tabStyle,
-                isActive ? "bg-bg z-10 border border-b-[0] border-t-text border-x-text -mb-[1px]" : " bg-text/10 "
+                isActive ? activeTabStyle : " bg-text/10 "
               )}
             >
               {isActive && (
@@ -47,15 +47,20 @@ export default function Tabs({ onTextBodyChange, textDisplay }) {
           );
         })}
       </div>
-      <div className="z-0 mb-10 w-[800px] border-text border-[.1px]" />
+      <div className={bottomLine} />
     </>
   );
 }
 
-const tabStyle = clsx(
-  "rounded-t-md px-6 relative py-2 font-bold tracking-widest mr-2 cursor-pointer"
+const activeTabStyle = clsx(
+  "bg-bg z-10 border border-b-[0] border-t-text border-x-text -mb-[1px]"
 );
-
+const tabStyle = clsx(
+  "rounded-t-md px-2 md:px-6 relative py-2 font-bold tracking-widest mr-2 cursor-pointer text-xxs md:text-sm"
+);
+const bottomLine = clsx(
+  "z-0 mb-10 w-full md:max-w-[800px] border-text border-[.1px]"
+);
 const circleStyle = clsx(
   "absolute top-0 left-0 h-4 w-4 rounded-full -mt-1 -ml-1 bg-orange z-20"
 );

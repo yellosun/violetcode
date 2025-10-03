@@ -42,7 +42,7 @@ export default function Nav() {
 
   return (
     <div className={container}>
-      <div className="mb-2 h-80 w-[1px] mr-[5px] bg-text/40" />
+      <div className="mb-2 md:h-80 h-[360px] w-[1px] mr-[5px] bg-text/40" />
       {Object.values(routesFlat).map((route, idx) => {
         return (
           <>
@@ -54,9 +54,9 @@ export default function Nav() {
               className={linkStyle}
             >
               <code className={linkTextStyle}>
-                {"<"}
+                {/* {"<"} */}
                 {route ? route : "intro"}
-                {" />"}
+                {/* {" />"} */}
               </code>
               <div
                 className={clsx(
@@ -76,10 +76,10 @@ export default function Nav() {
 }
 
 const container = clsx(
-  "fixed right-0 h-full flex flex-col justify-center items-end mr-10 z-10"
+  "fixed right-0 h-full flex flex-col justify-center items-end md:mr-10 mr-4 z-10"
 );
 const linkStyle = clsx(
   "cursor-pointer flex items-center w-[130px] justify-end group"
 );
-const linkTextStyle = clsx("text-xs capitalize group-hover:border-b h-[20px]");
-const lineStyle = clsx("bg-text/40 my-2 h-4 w-[1px] last:h-80 mr-[5px]");
+const linkTextStyle = clsx("text-xs hidden lg:flex capitalize group-hover:border-b h-[20px]");
+const lineStyle = clsx("bg-text/40 my-2 h-4 w-[1px] last:md:h-80 last:h-[360px] mr-[5px]");

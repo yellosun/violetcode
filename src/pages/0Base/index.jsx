@@ -4,7 +4,7 @@ import * as pages from '../../pages'
 
 export default function Base() {
   return (
-    <div className="flex w-full">
+    <div className="flex flex-col w-full">
       <comp.Header />
       <comp.Nav />
       <div className={container}>
