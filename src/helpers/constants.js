@@ -161,5 +161,3 @@ export const work = [
     desc: "Recognized as an App Developer Awardee at Technology Fair & Math Olympiads in Orange County, California, for two consecutive years. Developed a website and produced a music video that earned top honors at the technology fair, demonstrating technical creativity and problem-solving skills. Selected to compete in math competitions, highlighting strong analytical and algorithmic abilities.",
   },
 ];
-
-

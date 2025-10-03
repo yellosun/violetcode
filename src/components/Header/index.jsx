@@ -17,8 +17,16 @@ export default function Header() {
             className={iconStyle}
             href="mailto:violetwmoon@gmail.com"
           >
-            <MailIcon className="mr-2 h-4 w-4" />
-            Email
+            <PersonIcon className="mr-2 h-4 w-4" />
+            LinkedIn
+          </a>
+          <span className="px-4">{"/"}</span>
+          <a
+            target="_blank"
+            className={iconStyle}
+            href="https://www.github.com/yellosun"
+          >
+            <CopyIcon className="mr-2 h-4 w-4" /> GitHub
           </a>
           <Seperator />
           <a
