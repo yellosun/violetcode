@@ -91,7 +91,7 @@ export default function About() {
 }
 
 const parentCont = clsx(
-  "md:h-screen mb-40 md:mb-0 w-full flex flex-col items-center justify-center max-w-[600px] lg:max-w-[800px] px-10 md:px-0"
+  "md:h-screen mb-40 md:mb-0 w-full flex flex-col items-center justify-center max-w-[600px] lg:max-w-[800px] px-10 md:px-0 relative"
 );
 const plainTextCont = clsx(" overflow-scroll h-[fit-content] text-xs pr-2");
 const htmlContainer = clsx(
