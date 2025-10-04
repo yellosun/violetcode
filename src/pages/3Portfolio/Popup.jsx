@@ -98,7 +98,7 @@ const imgContainer = clsx(
   "md:w-1/2 flex items-center justify-center flex-col md:ml-4"
 );
 const bodyContainer = clsx(
-  "relative bg-text p-6 rounded-sm w-full lg:w-2/3 shadow-lg flex min-h-[500px] h-screen md:h-auto flex items-start"
+  "relative bg-text p-6 rounded-sm w-full lg:w-2/3 shadow-lg flex min-h-[500px] h-[100dvh] overflow-scroll md:h-auto flex items-start"
 );
 const buttonStyle = clsx(
   "text-text hover:scale-[0.98] mr-4 mt-4 top-0 mb-6 right-0",
