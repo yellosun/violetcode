@@ -43,8 +43,6 @@ export default function Experience() {
       className={styles.parentContainer}
       id={routesFlat.experience}
       variants={containerVariants}
-      initial="hidden"
-      whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className={styles.innerParent}>

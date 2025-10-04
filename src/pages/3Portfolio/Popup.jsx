@@ -54,7 +54,7 @@ export default function PopUp({ onClose, item }) {
                   ))}
               </div>
             </div>
-            <div className="md:mb-4">
+            <div className="md:mb-4 ">
               <div className={subtitle}>Description</div>
               <code className="text-xxs flex">{item.desc}</code>
             </div>
@@ -73,6 +73,7 @@ export default function PopUp({ onClose, item }) {
               </a>
             )}
             <img
+              className="mt-2 md:mt-0"
               src={item.video ? item.video : item.image}
               alt={item.caption}
             />
@@ -88,24 +89,24 @@ const innerParent = clsx("text-bg flex flex-col-reverse md:flex-row");
 const companyText = clsx(
   "md:text-xl tracking-widest md:mt-2 mt-1 md:mb-6 mb-4"
 );
-const viewText = clsx(
-  "text-xs uppercase tracking-widest pl-2 mr-1 hidden md:block"
-);
+const viewText = clsx("text-xs uppercase tracking-widest pl-2 mr-1 hidden md:block");
 const caption = clsx("text-[8px] italic flex pt-4 text-center");
 const subtitle = clsx(
   "tracking-widest mb-2 pb-2 text-xs uppercase border-b border-bg/40 w-1/3 font-bold"
 );
-const buttonStyle = clsx(
-  "text-text hover:scale-[0.98] mr-4 mt-4 top-0 right-0 md:w-20 w-12 md:h-10 h-12 absolute flex items-center justify-center rounded-full shadow-lg bg-orange"
-);
 const imgContainer = clsx(
-  "md:w-1/2 flex items-center justify-center flex-col ml-4"
+  "md:w-1/2 flex items-center justify-center flex-col md:ml-4"
 );
 const bodyContainer = clsx(
-  "relative bg-text p-6 rounded-sm w-full lg:w-2/3 shadow-lg flex min-h-[500px]"
+  "relative bg-text p-6 rounded-sm w-full lg:w-2/3 shadow-lg flex min-h-[500px] h-screen md:h-auto flex items-start"
+);
+const buttonStyle = clsx(
+  "text-text hover:scale-[0.98] mr-4 mt-4 top-0 mb-6 right-0",
+  " md:w-20 md:h-10 w-12 h-12 absolute flex items-center justify-center rounded-full shadow-lg bg-orange"
 );
 const externalBtn = clsx(
-  "absolute top-0 right-0 mt-4 hover:scale-[0.98] mr-10 text-text z-60 text-6xl"
+  "absolute top-0 left-0 md:left-auto md:right-0 mt-4 hover:scale-[0.98] md:mr-10 ml-4 text-text z-60 md:text-6xl text-3xl",
+  " w-12 h-12 z-30 bg-bg md:bg-transparent rounded-full"
 );
 const parentContainer = clsx(
   "fixed inset-0 bg-bg/80 flex items-center justify-center z-50"
