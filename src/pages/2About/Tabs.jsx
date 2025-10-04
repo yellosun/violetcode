@@ -57,7 +57,7 @@ const activeTabStyle = clsx(
   "bg-bg z-10 border border-b-[0] border-t-text border-x-text -mb-[1px]"
 );
 const tabStyle = clsx(
-  "rounded-t-md  md:px-6 relative py-2 font-bold tracking-widest mr-2 cursor-pointer text-xxs md:text-sm"
+  "rounded-t-md  md:px-6 relative py-2 px-8 font-bold tracking-widest mr-2 cursor-pointer text-xxs md:text-sm"
 );
 const bottomLine = clsx(
   "z-0 mb-10 w-full md:max-w-[800px] border-text border-[.1px]"
