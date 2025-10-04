@@ -4,7 +4,7 @@ import clsx from "clsx";
 export default function Marquee({ speed = 100 }) {
   return (
     <FastMarquee
-      className="w-screen overflow-hidden"
+      className="w-screen overflow-hidden z-50"
       speed={speed}
       loop={0} // infinite loop
       direction="left" // scrolling right to left
