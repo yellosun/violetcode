@@ -25,7 +25,7 @@ export default function Tabs({ onTextBodyChange, textDisplay }) {
             >
               {isActive && (
                 <motion.div
-                  className="absolute inset-0 rounded-t-md z-0"
+                  className="absolute inset-0 rounded-t-md z-0 bg-bg"
                   transition={{ type: "spring", stiffness: 200, damping: 100 }}
                 />
               )}
@@ -54,7 +54,7 @@ export default function Tabs({ onTextBodyChange, textDisplay }) {
 }
 
 const activeTabStyle = clsx(
-  "bg-bg z-10 border border-b-[0] border-t-text border-x-text -mb-[1px]"
+  "bg-bg z-10 border border-b-transparent border-t-text border-x-text -mb-[2px]"
 );
 const tabStyle = clsx(
   "rounded-t-md  md:px-6 relative py-2 px-8 font-bold tracking-widest mr-2 cursor-pointer text-xs md:text-sm"

@@ -72,6 +72,6 @@ const baseLinkStyle = clsx(
   "flex w-[200px] bg-gradient-to-r from-red to-orange justify-center items-center"
 );
 const iconStyle = clsx(
-  "flex italic px-4 py-2 items-center hover:underline text-xs hover:shadow-md px-6 py-2 cursor-pointer"
+  "flex italic px-4 py-2 items-center hover:underline text-xs px-6 py-2 cursor-pointer"
 );
 const desktopOnlyIcon = clsx(iconStyle, "hidden md:flex");

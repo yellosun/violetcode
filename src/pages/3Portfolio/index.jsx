@@ -48,7 +48,7 @@ const projectsContainer = clsx(
   "flex flex-wrap justify-center items-center md:-ml-6 -ml-4 grid md:grid-cols-3 grid-cols-2"
 );
 const projectContainer = clsx(
-  "shadow-lg md:w-[20rem] hover:md:h-[11rem] hover:md:-mt-12 md:h-[8rem] h-[6rem] w-[9rem]",
+  "md:w-[20rem] hover:md:h-[11rem] hover:md:-mt-12 md:h-[8rem] h-[6rem] w-[9rem]",
   " pl-3 cursor-pointer relative overflow-hidden"
 );
 const imgStyle = clsx("h-auto w-full top-0 absolute object-fit");
