@@ -12,12 +12,12 @@ export const bio = `<div class="mb-4">
   As a Lead Frontend Developer and advocate for thoughtful,
   human-centered technology, I specialize in building React-based
   codebases from the ground up. Whether turning ideas into interactive actualities, getting existing codebases to run effortlessly, 
-  resolving cross-team disputes, or building a frontend team form scratch, I have a few core tenents.
+  resolving cross-team disputes, or building a frontend team from scratch, I have a few core tenents.
   </div>
   <div class="mb-4 md:ml-10 max-w-[600px]">
   <div class="font-bold mb-2">1) What are the pain points? Does this block us or bug us? </div>
   <div class="font-bold mb-2">2) Is there and what is the root?</div>
-  <div class="font-bold mb-2">3) Is it more more client-conscious to address it or pivot? Is it more more developer-compassionate to address it or pivot?</div>
+  <div class="font-bold mb-2">3) Is it more client-conscious to address it or pivot? Is it more more developer-compassionate to address it or pivot?</div>
   <div class="font-bold mb-2">4) What is the path to fastest development while maintaining expectional product standards and developer quality of life?</div>
   <div class="font-bold mb-2">5) How can we ensure code is scalable and efficient while retaining legible and enjoyable architecture?</div>
   </div>
